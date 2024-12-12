@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #82d6f5;
+
+}
+
+.search {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #82d6f5;
+  margin-top: 3%;
+}
+
+.searchTerm {
+  width: 80%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  height: 36px;
+
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+.card {
+  margin: auto;
+  width: 100%;
+  padding: 40px 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  max-width: 550px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .15);
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.card::after,
+.card img {
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+}
+
+.card,
+.stats {
+  display: flex;
+}
+
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+
+
+.card::after {
+  height: 240px;
+  width: 240px;
+  background-color: #006cfaaa;
+  top: -128px;
+  right: -128px;
+  box-shadow: 32px 96px 0 -48px #ffffff;
+}
+
+.card img {
+  width: 128px;
+  min-width: 80px;
+  box-shadow: 0 0 0 5px #FFF;
+}
+
+.infos {
+  margin-left: 150px;
+  margin-top: -120px;
+}
+
+.name {
+  margin-bottom: 16px;
+}
+
+.name h2 {
+  font-size: 20.8px;
+}
+
+.name h4 {
+  font-size: 12px;
+  color: #333;
+}
+
+.text {
+  font-size: 14.4px;
+  margin-bottom: 16px;
+}
+
+.stats {
+  margin-bottom: 16px;
+}
+
+.stats li {
+  min-width: 80px;
+}
+
+.stats li h3 {
+  font-size: 15.84px;
+}
+
+.stats li h4 {
+  font-size: 12px;
+}
+
+.links button {
+  font-family: 'Poppins', sans-serif;
+  min-width: 120px;
+  padding: 8px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+.links .view {
+  background-color: #222;
+  color: #FFF;
+}
+
+
+.links .view:hover {
+  background-color: transparent;
+  color: #222;
+}
+
+
+
+@media screen and (max-width: 450px) {
+  .card {
+    display: block;
+  }
+
+  .infos {
+    margin-left: 0;
+    margin-top: 24px;
+  }
+
+  .links button {
+    min-width: 100px;
+  }
+}

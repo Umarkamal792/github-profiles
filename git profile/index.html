@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="search">
+      <input type="text" id="username-input" class="searchTerm" placeholder="Enter GitHub username">
+      <button type="button" class="searchButton" onclick="fetchProfile()">
+        <img src="img/icons8-search-50.png" width="33px" alt="Search">
+      </button>
+    </div>
+  </div>
+
+  <div class="card" id="profile-card" style="display: none;">
+    <div class="img">
+      <img id="avatar" alt="User Avatar">
+    </div>
+    <div class="infos">
+      <div class="name">
+        <h2 id="name"></h2>
+        <h4 id="email"></h4>
+      </div>
+      <p id="bio" class="text"></p>
+      <ul class="stats">
+        <li>
+          <h3 id="repos"></h3>
+          <h4>Projects</h4>
+        </li>
+        <li>
+          <h3 id="followers"></h3>
+          <h4>Followers</h4>
+        </li>
+
+        <li>
+          <h3 id="following"></h3>
+          <h4>Following</h4>
+        </li>
+      </ul>
+      <div class="links">
+        <button class="view" id="github-link">GitHub</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
